@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair:opsz,wdth,wght@5..1200,112.5,800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --color-brand-blue: #053da4;
+  --color-brand-yellow: #ffcf81;
+  --color-brand-hover: #88c9bf;
+  --color-brand-bg: #fdfaf6;
+  --color-brand-bg-alt: #fef7ed;
+
+  --font-playfair: "Playfair", serif;
+  --font-work: "Work Sans", sans-serif;
+  --font-caveat: "Caveat", cursive;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  font-family: var(--font-work);
+  color: #222;
+  overflow-x: hidden;
+}
