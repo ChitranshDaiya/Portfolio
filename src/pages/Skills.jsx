@@ -19,29 +19,24 @@ export default function Skills() {
 
   const skillsData = [
     {
-      title: "Frontend Development",
+      title: "Core React & UI",
       icon: <Monitor className="w-8 h-8 text-brand-blue" />,
-      skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "DOM Manipulation"]
+      skills: ["React Fundamentals", "Component-Based UI Development", "DOM Manipulation"]
     },
     {
-      title: "UI / UX Design",
+      title: "Styling & Layouts",
       icon: <PenTool className="w-8 h-8 text-orange-500" />,
-      skills: ["Figma", "Wireframing", "Prototyping", "User Flows", "Responsive Design"]
+      skills: ["Tailwind CSS", "Responsive Design", "Rapid Prototyping", "Figma"]
     },
     {
-      title: "Development Tools",
+      title: "Tools & Debugging",
       icon: <Terminal className="w-8 h-8 text-gray-700" />,
-      skills: ["Git", "GitHub", "VS Code", "Browser DevTools", "Debugging"]
+      skills: ["Frontend Debugging", "Git / GitHub", "Browser DevTools"]
     },
     {
-      title: "Database & Backend",
+      title: "Data & Logic",
       icon: <Database className="w-8 h-8 text-green-600" />,
-      skills: ["MySQL", "MongoDB", "Form Handling"]
-    },
-    {
-      title: "Core Strengths",
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      skills: ["Rapid Prototyping", "Fast Learner", "Creative Problem Solving", "Independent Research"]
+      skills: ["Basic Database Handling", "State Management", "Form Handling"]
     }
   ];
 

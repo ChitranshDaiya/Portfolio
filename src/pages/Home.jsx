@@ -86,12 +86,12 @@ export default function Home() {
       <HangingSpider />
 
       <nav className="sticky top-0 z-40 bg-white/50 backdrop-blur-md border-b border-gray-200/50">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <Link to="/" className="text-xl md:text-2xl font-playfair font-bold text-brand-blue italic tracking-wide">
             Chitransh
           </Link>
-          <div className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#intro" className="hover:text-brand-hover transition">Home</a>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium">
+            <Link to="/" className="hover:text-brand-hover transition">Home</Link>
             <Link to="/skills" className="hover:text-brand-hover transition">Skills</Link>
             <Link to="/projects" className="hover:text-brand-hover transition">Projects</Link>
             <Link to="/resume" className="hover:text-brand-hover transition">Resume</Link>
@@ -101,28 +101,54 @@ export default function Home() {
 
       <main className="py-12">
         {/* Intro */}
-        <Section id="intro" className="relative group">
+        <Section id="intro" className="relative group mt-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 text-green-700 border border-green-200 rounded-full text-sm font-medium mb-6 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-[pulse_2s_infinite]"></span>
+            Currently seeking Frontend / UI Internship Opportunities
+          </div>
+
           <h1 className="font-playfair text-[clamp(2.2rem,5vw,4rem)] font-extrabold italic text-brand-blue leading-tight mb-4">
             Hi, I'm Chitransh.
           </h1>
-          <p className="font-light italic text-gray-600 mb-6 text-lg">
-            Creative by Curiosity · Logical by Nature · Forever a Learner
-          </p>
           
           <img 
             src="/Chit Photo.jpg" 
             alt="Chitransh" 
-            className="relative float-right ml-6 mb-4 w-48 h-auto border-4 border-[#525252] rounded-2xl grayscale transition-all duration-700 ease-in-out hover:grayscale-0 shadow-[5px_5px_rgba(84,84,84,0.2),_10px_10px_rgba(84,84,84,0.1)] hover:shadow-[5px_5px_rgba(100,100,0,0.4),_10px_10px_rgba(100,100,0,0.3),_15px_15px_rgba(100,100,0,0.2),_20px_20px_rgba(100,100,0,0.1)] hover:-translate-x-1 hover:-translate-y-1"
+            className="relative float-right ml-6 mb-4 w-48 h-auto border-[3px] border-[#525252] rounded-2xl grayscale transition-all duration-500 ease-in-out hover:grayscale-0 shadow-lg hover:shadow-xl hover:-translate-y-1"
           />
-          
-          <p className="text-[1.3em] leading-relaxed">
-            A student, aspiring frontend developer, passionate UI/UX designer, and a traveller finding my way through the maze of life.
-            <br className="my-2" />
-            In this little corner of the internet, you’ll find pieces of my journey — the interfaces I design, the projects I build, and the skills I grow.
-            <br className="my-2" />
-            So go ahead, click around. You might find something interesting. Or weird. Or both.
+
+          <p className="font-playfair font-bold text-gray-800 mb-6 text-xl tracking-wide">
+            Creative by Curiosity &middot; Logical by Nature &middot; Forever a Learner
           </p>
-          <div className="clear-both"></div>
+          
+          <div className="text-[1.3em] leading-relaxed text-gray-800 space-y-4">
+            <p>
+              I'm a CSE student focused on frontend development and UI experiences &mdash; building responsive web interfaces and converting ideas into polished user experiences.
+            </p>
+            <p className="text-[0.9em] text-gray-600 font-light">
+              Outside code, I'm usually exploring ideas, design systems, or overthinking side projects.
+            </p>
+          </div>
+          
+          <div className="clear-both hidden sm:block"></div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 mt-8 pt-4 lg:pt-0">
+            <Link to="/projects" className="font-work bg-brand-blue text-white px-6 py-2.5 rounded-lg shadow-[3px_3px_0_#222] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#222] transition-all font-semibold flex items-center justify-center border-2 border-[#222]">
+              View Projects
+            </Link>
+            <Link to="/resume" className="font-work bg-white text-[#222] border-2 border-[#222] px-6 py-2.5 rounded-lg shadow-[3px_3px_0_#222] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#222] transition-all font-semibold flex items-center justify-center">
+              Resume
+            </Link>
+            <a href="https://github.com/ChitranshDaiya" target="_blank" rel="noopener noreferrer" className="font-work bg-white text-[#222] border-2 border-[#222] px-5 py-2.5 rounded-lg shadow-[3px_3px_0_#222] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#222] transition-all font-semibold flex items-center justify-center gap-2">
+              <GitBranch size={18} />
+              GitHub
+            </a>
+            <a href="#contact" className="font-work bg-transparent text-gray-700 hover:text-brand-blue border-2 border-transparent px-4 py-2.5 rounded-lg hover:underline transition-all font-medium flex items-center justify-center">
+              Contact
+            </a>
+          </div>
+          <div className="clear-both sm:hidden pt-4"></div>
         </Section>
 
         {/* Whats This */}
